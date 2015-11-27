@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,9 @@ import com.example.offlineinstance.pojo.WorkflowPreventedReasons;
 
 @RestController
 public class OfflineSphereStatusController {
+
+	@Value("${offlineAPIVersion}")
+	private String	offlineAPIVersion;
 
 	@RequestMapping("/offlineinstance/offlinestatus")
 	public OfflineSphereStatus offlineStatus() {
@@ -64,6 +68,6 @@ public class OfflineSphereStatusController {
 
 	@RequestMapping("/offlineinstance/offlinetechnicalstatus")
 	public OfflineSphereTechnicalStatus offlineTechnicalStatus() {
-		return new OfflineSphereTechnicalStatus("192.168.3.3", 1001, "3.1.0-SNAPSHOT", "todo...", "todo...");
+		return new OfflineSphereTechnicalStatus(offlineAPIVersion, "192.168.3.3", 1001, "3.1.0-SNAPSHOT", "todo...", "todo...");
 	}
 }

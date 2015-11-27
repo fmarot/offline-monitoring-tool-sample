@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class OfflineSphereTechnicalStatus {
 
+	private String	offlineAPIVersion;
 	private String	ip;
 	private int		port;
 	private String	sphereVersion;

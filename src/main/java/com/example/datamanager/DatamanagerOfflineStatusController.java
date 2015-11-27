@@ -3,6 +3,7 @@ package com.example.datamanager;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,9 +17,12 @@ import com.example.datamanager.pojo.WorkflowTriggeredEvent;
 @RestController
 public class DatamanagerOfflineStatusController {
 
+	@Value("${offlineAPIVersion}")
+	private String	offlineAPIVersion;
+
 	@RequestMapping("/datamanager/offlinestatus")
 	public DatamanagerOfflineStatus offlineStatus() {
-		DatamanagerOfflineStatus status = new DatamanagerOfflineStatus();
+		DatamanagerOfflineStatus status = new DatamanagerOfflineStatus(offlineAPIVersion);
 		status.setOfflineEvents(new ArrayList<OfflineEvent>() {
 
 			{
