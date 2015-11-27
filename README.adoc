@@ -1,19 +1,19 @@
 
 == How to run this mock application
 
-run with Maven:
+=== Run with Maven:
 
  mvn spring-boot:run
 
-command to retrieve a status: use wget
+=== Command to retrieve a status: use wget
 
  wget http://localhost:8080/datamanager/offlinestatus --http-password=password --http-user=user --auth-no-challenge
 
-Authentication
+=== Authentication
 
 Login / pwd are hardcoded for now: "user" / "password"
 
-Available endpoints:
+=== Available endpoints:
 
  http://localhost:8080/datamanager/offlinestatus
 
