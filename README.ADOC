@@ -1,0 +1,24 @@
+
+== How to run this mock application
+
+run with Maven:
+
+ mvn spring-boot:run
+
+command to retrieve a status: use wget
+
+ wget http://localhost:8080/datamanager/offlinestatus --http-password=password --http-user=user1 --auth-no-challenge
+
+Available endpoints:
+
+ http://localhost:8080/datamanager/offlinestatus
+
+ http://localhost:8080/offlineinstance/offlinestatus
+ 
+ http://localhost:8080/offlineinstance/offlinetechnicalstatus
+ 
+== Known limitations
+
+* Data returned are fake and always the same
+* HTTPS is not implemented for now
+* Basic auth is the only auth method for now
