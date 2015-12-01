@@ -10,6 +10,7 @@ public class OfflineSphereStatus {
 
 	private List<WaitingQueueItem>		waitingQueue	= new ArrayList<>();
 	private List<ProcessedQueueItem>	processedQueue	= new ArrayList<>();
+	private WaitingQueueItem processingItem;
 	
 	public void addWaitingItem(WaitingQueueItem item) {
 		waitingQueue.add(item);

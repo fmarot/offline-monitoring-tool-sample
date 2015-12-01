@@ -39,6 +39,11 @@ public class OfflineSphereStatusController {
 		WaitingQueueItem waitingItem2 = new WaitingQueueItem(studyInfo2, new Date(), "worflowFoo");
 		status.addWaitingItem(waitingItem2);
 
+		// Study currently being processed
+		StudyInfo studyInfoProcessing = new StudyInfo(GLOBALS.STUDY_4_UUID);
+		WaitingQueueItem processingItem = new WaitingQueueItem(studyInfoProcessing, new Date(), "worflowBar");
+		status.setProcessingItem(processingItem);
+
 		// 1st processed study
 		StudyInfo studyInfo = new StudyInfo(GLOBALS.STUDY_3_UUID);
 		Date timeOfAddition = new Date();
