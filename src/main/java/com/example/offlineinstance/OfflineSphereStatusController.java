@@ -58,8 +58,8 @@ public class OfflineSphereStatusController {
 			add(new WorkflowPreventedReasons("fakeWF_2", Arrays.asList("MANUFACTURER" ,"INSTANCES_SIZE", "IMAGE_TYPE")));
 		}};
 		List<SeriesInfo> availableSeries = new ArrayList<SeriesInfo>() {{
-			add(new SeriesInfo("manufacturer", "model", "2.2-BETA", "description", "protocol", "imageType", "type"));
-			add(new SeriesInfo("manufacturerFoo", "modelBar", "3.1", " ef  sgldg slefjuqd sf", "XXXX", "MR", "xx"));
+			add(new SeriesInfo("manufacturer", "model", "2.2-BETA", "T2 FLAIR TRA", "2 FLAIR TRA SENSE", "301",  Arrays.asList("ORIGINAL" ,"PRIMARY", "M_IR")));
+			add(new SeriesInfo("manufacturer2", "old model", "1.1", "PERFUSION", "PERFUSION CLEAR", "401",  Arrays.asList("ORIGINAL" ,"PRIMARY", "FFE")));
 		}};
 		// @formatter:on
 		ProcessingParameters processingParameter1 = new ProcessingParameters(workflowPreventedReasons, availableSeries);
