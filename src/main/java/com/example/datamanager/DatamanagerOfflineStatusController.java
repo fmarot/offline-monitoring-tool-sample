@@ -36,9 +36,9 @@ public class DatamanagerOfflineStatusController {
 		status.setOfflineSpheres(new ArrayList<OfflineSphereInfo>() {
 
 			{
-				add(new OfflineSphereInfo("192.168.0.1", 8080));
-				add(new OfflineSphereInfo("192.168.2.1", 80));
-				add(new OfflineSphereInfo("192.168.10.10", 999));
+				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://127.0.0.1:8080/offlineinstance/offlinestatus"));
+				add(new OfflineSphereInfo("192.168.2.1", 80, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://192.168.10.10:8080/offlineinstance/offlinestatus"));
+				add(new OfflineSphereInfo("192.168.10.10", 999, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://192.168.10.10:999/offlineinstance/offlinestatus"));
 			}
 		});
 		return status;

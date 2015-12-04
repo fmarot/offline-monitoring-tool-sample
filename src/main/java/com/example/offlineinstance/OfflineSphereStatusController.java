@@ -27,25 +27,35 @@ public class OfflineSphereStatusController {
 
 	@RequestMapping("/offlineinstance/offlinestatus")
 	public OfflineSphereStatus offlineStatus() {
+		OfflineSphereStatus status = buildFakeStatus();
+		return status;
+	}
+
+	@RequestMapping("/offlineinstance/offlinetechnicalstatus")
+	public OfflineSphereTechnicalStatus offlineTechnicalStatus() {
+		return new OfflineSphereTechnicalStatus(offlineAPIVersion, "192.168.3.3", 1001, "3.1.0-SNAPSHOT", "todo...", "todo...");
+	}
+
+	private OfflineSphereStatus buildFakeStatus() {
 		OfflineSphereStatus status = new OfflineSphereStatus();
 
 		// 1st waiting study
-		StudyInfo studyInfo1 = new StudyInfo(GLOBALS.STUDY_1_UUID);
+		StudyInfo studyInfo1 = new StudyInfo(GLOBALS.STUDY_1_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_1_UUID);
 		WaitingQueueItem waitingItem1 = new WaitingQueueItem(studyInfo1, new Date(), "worflowFoo");
 		status.addWaitingItem(waitingItem1);
 
 		// 2nd waiting study
-		StudyInfo studyInfo2 = new StudyInfo(GLOBALS.STUDY_2_UUID);
+		StudyInfo studyInfo2 = new StudyInfo(GLOBALS.STUDY_2_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_2_UUID);
 		WaitingQueueItem waitingItem2 = new WaitingQueueItem(studyInfo2, new Date(), "worflowFoo");
 		status.addWaitingItem(waitingItem2);
 
 		// Study currently being processed
-		StudyInfo studyInfoProcessing = new StudyInfo(GLOBALS.STUDY_4_UUID);
+		StudyInfo studyInfoProcessing = new StudyInfo(GLOBALS.STUDY_4_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_4_UUID);
 		WaitingQueueItem processingItem = new WaitingQueueItem(studyInfoProcessing, new Date(), "worflowBar");
 		status.setProcessingItem(processingItem);
 
 		// 1st processed study
-		StudyInfo studyInfo = new StudyInfo(GLOBALS.STUDY_3_UUID);
+		StudyInfo studyInfo = new StudyInfo(GLOBALS.STUDY_3_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_3_UUID);
 		Date timeOfAddition = new Date();
 		String workflow = GLOBALS.WORFLOW_1;
 		Date timeOfProcessed = new Date();
@@ -67,12 +77,6 @@ public class OfflineSphereStatusController {
 		ProcessedQueueItem processedItem = new ProcessedQueueItem(studyInfo, timeOfAddition, workflow, timeOfProcessed, result, resultInfo, params);
 
 		status.addProcessedItem(processedItem);
-
 		return status;
-	}
-
-	@RequestMapping("/offlineinstance/offlinetechnicalstatus")
-	public OfflineSphereTechnicalStatus offlineTechnicalStatus() {
-		return new OfflineSphereTechnicalStatus(offlineAPIVersion, "192.168.3.3", 1001, "3.1.0-SNAPSHOT", "todo...", "todo...");
 	}
 }

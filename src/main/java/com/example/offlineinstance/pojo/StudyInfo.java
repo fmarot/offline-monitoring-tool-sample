@@ -8,4 +8,5 @@ import lombok.Data;
 public class StudyInfo {
 
 	private String	studyIUID;
+	private String href;
 }
