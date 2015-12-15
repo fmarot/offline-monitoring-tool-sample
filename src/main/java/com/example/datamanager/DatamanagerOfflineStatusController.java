@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.GLOBALS;
-import com.example.datamanager.pojo.DatamanagerOfflineStatus;
-import com.example.datamanager.pojo.NewStudyEvent;
-import com.example.datamanager.pojo.OfflineEvent;
-import com.example.datamanager.pojo.OfflineSphereInfo;
-import com.example.datamanager.pojo.WorkflowTriggeredEvent;
+import com.example.datamanager.pojo.offlinestatus.DatamanagerOfflineStatus;
+import com.example.datamanager.pojo.offlinestatus.NewStudyEvent;
+import com.example.datamanager.pojo.offlinestatus.OfflineEvent;
+import com.example.datamanager.pojo.offlinestatus.OfflineSphereInfo;
+import com.example.datamanager.pojo.offlinestatus.WorkflowTriggeredEvent;
 
 @RestController
 public class DatamanagerOfflineStatusController {

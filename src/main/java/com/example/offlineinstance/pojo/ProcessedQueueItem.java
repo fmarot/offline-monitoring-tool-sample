@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class ProcessedQueueItem extends WaitingQueueItem {
 
-	public ProcessedQueueItem(StudyInfo studyInfo, Date timeOfAddition,
+	public ProcessedQueueItem(StudyLink studyInfo, Date timeOfAddition,
 			String workflow, Date timeOfProcessed,
 			Boolean result, String resultInfo,
 			List<ProcessingParameters> processingParameters) {

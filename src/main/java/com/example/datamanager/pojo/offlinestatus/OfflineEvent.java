@@ -1,4 +1,4 @@
-package com.example.datamanager.pojo;
+package com.example.datamanager.pojo.offlinestatus;
 
 import java.util.Date;
 

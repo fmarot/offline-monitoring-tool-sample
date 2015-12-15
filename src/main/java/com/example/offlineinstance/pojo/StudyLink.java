@@ -5,8 +5,8 @@ import lombok.Data;
 
 @AllArgsConstructor
 @Data
-public class StudyInfo {
+public class StudyLink {
 
 	private String	studyIUID;
-	private String href;
+	private String	href;
 }

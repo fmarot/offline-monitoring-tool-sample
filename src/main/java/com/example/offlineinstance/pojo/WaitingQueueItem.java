@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 public class WaitingQueueItem {
 
-	private StudyInfo	studyInfo;
+	private StudyLink	studyInfo;
 	private Date		timeOfAddition;
 	/** may be null in case of automatic action triggered on new study event */
 	private String		workflow;
