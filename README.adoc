@@ -15,21 +15,22 @@ Login / pwd are hardcoded for now: "user" / "password"
 
 === Available endpoints:
 
- http://localhost:8080/datamanager/offlinestatus
+* http://localhost:8080/datamanager/offlinestatus
  
- http://localhost:8080/datamanager/studies
+* http://localhost:8080/datamanager/studies
 
- http://localhost:8080/offlineinstance/offlinestatus
+* http://localhost:8080/offlineinstance/offlinestatus
  
- http://localhost:8080/offlineinstance/offlinetechnicalstatus
+* http://localhost:8080/offlineinstance/offlinetechnicalstatus
  
- http://localhost:8080/datamanager/studies
+* http://localhost:8080/datamanager/studies
 
- http://localhost:8080/datamanager/studies/<2> (replace the number with an existing study uid)
+* http://localhost:8080/datamanager/studies/<2> (replace the number with an existing studyIUID)
  
- http://localhost:8080/datamanager/workflows/
+* http://localhost:8080/datamanager/workflows/
  
- http://localhost:8080/datamanager/workflows/<workflow_breast>/<1> ( "workflow_breast" represents an existing workflow id, "1" represents a study on which we want to start the WF, must be accessed through PUT)
+* http://localhost:8080/datamanager/workflows/<workflow_breast>/<1> ( "workflow_breast" represents an existing workflow id,
+"1" represents a study on which we want to start the WF, must be accessed through PUT)
  
 == Known limitations
 

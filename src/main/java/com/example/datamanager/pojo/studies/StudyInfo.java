@@ -13,8 +13,8 @@ public class StudyInfo {
 	String			patientName;
 	String			studyDescription;
 	String			patientId;
-	String			StudyUId;
-	Date			StudyDate;
+	String			studyIUId;
+	Date			studyDate;
 	List<Modality>	modalities;
 	Date			timeOfAddition;
 }

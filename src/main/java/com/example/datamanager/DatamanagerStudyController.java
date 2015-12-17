@@ -27,9 +27,9 @@ public class DatamanagerStudyController {
 		studies.add(createFakeStudy());
 	}
 
-	@RequestMapping(value = "/datamanager/studies/{studyUid}", method = RequestMethod.GET)
-	public StudyInfo studies(@PathVariable String studyUid) {
-		StudyInfo study = studies.findByUid(studyUid);
+	@RequestMapping(value = "/datamanager/studies/{studyIUID}", method = RequestMethod.GET)
+	public StudyInfo studies(@PathVariable String studyIUID) {
+		StudyInfo study = studies.findByUid(studyIUID);
 		return study;
 	}
 

@@ -16,13 +16,13 @@ public class StudiesInfo {
 		studies.add(study);
 	}
 
-	public StudyInfo findByUid(String studyUid) {
+	public StudyInfo findByUid(String studyIUID) {
 		for (StudyInfo study : studies) {
-			if (study.getStudyUId().equals(studyUid)) {
+			if (study.getStudyIUId().equals(studyIUID)) {
 				return study;
 			}
 		}
-		log.error("Study nor found uid={}", studyUid);
+		log.error("Study nor found uid={}", studyIUID);
 		return null;
 	}
 }
