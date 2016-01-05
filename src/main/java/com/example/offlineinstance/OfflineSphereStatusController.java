@@ -40,22 +40,22 @@ public class OfflineSphereStatusController {
 		OfflineSphereStatus status = new OfflineSphereStatus();
 
 		// 1st waiting study
-		StudyLink studyInfo1 = new StudyLink(GLOBALS.STUDY_1_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_1_UUID);
+		StudyLink studyInfo1 = new StudyLink(GLOBALS.STUDY_1_UUID, "http://127.0.0.1:8008/datamanager/studies/" + GLOBALS.STUDY_1_UUID);
 		WaitingQueueItem waitingItem1 = new WaitingQueueItem(studyInfo1, new Date(), "worflowFoo");
 		status.addWaitingItem(waitingItem1);
 
 		// 2nd waiting study
-		StudyLink studyInfo2 = new StudyLink(GLOBALS.STUDY_2_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_2_UUID);
+		StudyLink studyInfo2 = new StudyLink(GLOBALS.STUDY_2_UUID, "http://127.0.0.1:8008/datamanager/studies/" + GLOBALS.STUDY_2_UUID);
 		WaitingQueueItem waitingItem2 = new WaitingQueueItem(studyInfo2, new Date(), "worflowFoo");
 		status.addWaitingItem(waitingItem2);
 
 		// Study currently being processed
-		StudyLink studyInfoProcessing = new StudyLink(GLOBALS.STUDY_4_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_4_UUID);
+		StudyLink studyInfoProcessing = new StudyLink(GLOBALS.STUDY_4_UUID, "http://127.0.0.1:8008/datamanager/studies/" + GLOBALS.STUDY_4_UUID);
 		WaitingQueueItem processingItem = new WaitingQueueItem(studyInfoProcessing, new Date(), "worflowBar");
 		status.setProcessingItem(processingItem);
 
 		// 1st processed study
-		StudyLink studyInfo = new StudyLink(GLOBALS.STUDY_3_UUID, "http://127.0.0.1:8080/datamanager/studies/" + GLOBALS.STUDY_3_UUID);
+		StudyLink studyInfo = new StudyLink(GLOBALS.STUDY_3_UUID, "http://127.0.0.1:8008/datamanager/studies/" + GLOBALS.STUDY_3_UUID);
 		Date timeOfAddition = new Date();
 		String workflow = GLOBALS.WORFLOW_1;
 		Date timeOfProcessed = new Date();

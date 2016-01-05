@@ -14,6 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		// use default behavior with basic auth & browser built-in login dialog
+		//http.csrf().disable();
 		super.configure(http);
 	}
 
