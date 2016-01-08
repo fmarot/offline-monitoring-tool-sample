@@ -22,14 +22,12 @@ public class DatamanagerStudyController {
 	public DatamanagerStudyController() {
 		studies = new StudiesInfo();
 		studies.add(createFakeStudy(GLOBALS.STUDY_1_UUID));
-		studies.add(createFakeStudy(GLOBALS.STUDY_2_UUID));
 		studies.add(createFakeStudy(GLOBALS.STUDY_3_UUID));
 		studies.add(createFakeStudy(GLOBALS.STUDY_4_UUID));
 	}
 
 	@RequestMapping(value = "/datamanager/studies/{studyIUID}", method = RequestMethod.GET)
 	public StudyInfo studies(@PathVariable String studyIUID) throws InterruptedException {
-//		Thread.sleep(100);
 		StudyInfo study = studies.findByUid(studyIUID);
 		return study;
 	}

@@ -38,7 +38,7 @@ public class DatamanagerOfflineStatusController {
 			{
 				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://127.0.0.1:8080/offlineinstance/offlinestatus"));
 				add(new OfflineSphereInfo("localhost", 8080, "http://localhost:8080/offlineinstance/offlinetechnicalstatus", "http://localhost:8080/offlineinstance/offlinestatus"));
-				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://127.0.0.1:8080/offlineinstance/offlinestatus"));
+				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://10.0.0.10:8080/offlineinstance/offlinetechnicalstatus", "http://10.0.0.10:8080/offlineinstance/offlinestatus"));
 			}
 		});
 		return status;
