@@ -26,19 +26,19 @@ public class DatamanagerOfflineStatusController {
 		status.setOfflineEvents(new ArrayList<OfflineEvent>() {
 
 			{
-				add(new NewStudyEvent("111111-1111", new Date()));
-				add(new NewStudyEvent("654324", new Date()));
+				add(new NewStudyEvent(GLOBALS.STUDY_5_UUID, new Date()));
+				add(new NewStudyEvent(GLOBALS.STUDY_4_UUID, new Date()));
 				add(new WorkflowTriggeredEvent(GLOBALS.STUDY_2_UUID, new Date(), GLOBALS.WORFLOW_1));
 				add(new WorkflowTriggeredEvent(GLOBALS.STUDY_1_UUID, new Date(), GLOBALS.WORFLOW_2));
-				add(new NewStudyEvent("64741-4216587-4554", new Date()));
+				add(new NewStudyEvent(GLOBALS.STUDY_3_UUID, new Date()));
 			}
 		});
 		status.setOfflineSpheres(new ArrayList<OfflineSphereInfo>() {
 
 			{
 				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://127.0.0.1:8080/offlineinstance/offlinestatus"));
-				add(new OfflineSphereInfo("192.168.2.1", 80, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://192.168.10.10:8080/offlineinstance/offlinestatus"));
-				add(new OfflineSphereInfo("192.168.10.10", 999, "http://127.0.0.1:8080/offlineinstance/offlinetechnicalstatus", "http://192.168.10.10:999/offlineinstance/offlinestatus"));
+				add(new OfflineSphereInfo("localhost", 8080, "http://localhost:8080/offlineinstance/offlinetechnicalstatus", "http://localhost:8080/offlineinstance/offlinestatus"));
+				add(new OfflineSphereInfo("127.0.0.1", 8080, "http://10.0.0.10:8080/offlineinstance/offlinetechnicalstatus", "http://10.0.0.10:8080/offlineinstance/offlinestatus"));
 			}
 		});
 		return status;

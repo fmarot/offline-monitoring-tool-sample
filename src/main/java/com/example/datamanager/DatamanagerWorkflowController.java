@@ -26,7 +26,6 @@ public class DatamanagerWorkflowController {
 	@RequestMapping(value = "/datamanager/workflows/{workflowId}/studyIUID/{studyIUID}", method = RequestMethod.PUT)
 	public StudyInfo updateStudent(@PathVariable String workflowId, @PathVariable String studyIUID) {
 		log.info("Will launch WF {} on study {}", workflowId, studyIUID);
-		// TODO start the WF
 		StudyInfo study = DatamanagerStudyController.studies.findByUid(studyIUID);
 		return study;
 	}

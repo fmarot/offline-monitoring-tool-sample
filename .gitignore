@@ -59,3 +59,5 @@ local.properties
 # STS (Spring Tool Suite)
 .springBeans
 
+.idea
+offline-monitoring-tool-sample.iml
